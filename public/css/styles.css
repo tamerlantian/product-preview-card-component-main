@@ -14,7 +14,7 @@
     box-sizing: border-box;
 }
 
-h1,h2,h3,h4,h5 {
+p,h1,h2,h3,h4,h5 {
     margin: 0;
     padding: 0;
 }
@@ -75,12 +75,13 @@ body {
     color: var(--dark-grayish-blue);
     line-height: 1.5;
     font-size: .95rem;
+    margin: 1.5em 0;
 }
 
 .card__priceWrapper {
     display: flex;
     align-items: center;
-    margin-bottom: 15px;
+    margin-bottom: 0.938em;
 }
 
 .card__price {
@@ -93,6 +94,7 @@ body {
     font-family: var(--ff-secondary);
     text-decoration: line-through;
     margin-left: 20px;
+    color: var(--dark-grayish-blue)
 }
 
 .btn-default {
@@ -102,11 +104,11 @@ body {
     border: none;
     display: inline-block;
     width: 100%;
-    padding: 1em;
+    padding: 1.2em;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 5px;
+    margin-bottom: 0.313em;
     font-weight: bold;
     font-size: .8rem;
     border-radius: .5em;

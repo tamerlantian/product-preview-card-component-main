@@ -15,46 +15,67 @@
     box-sizing: border-box;
 }
 
-body {
-    padding: 0;
+h1,h2,h3,h4,h5 {
     margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
     background-color: hsl(30, 38%, 92%);
     font-family: var(--ff-primary);
-
+    height: 100vh;
 }
 
 .container {
+    max-width: 23.438em;
     height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
 }
 
 .card {
     border-radius: 10px;
+    max-width: 22em;
     background-color: white;
 }
 
-.card__header img {
+.card__header {
+    background: url('/images/image-product-mobile.jpg');
     border-radius: 10px 10px 0 0;
+    max-width: 100%;
+    min-height: 235px;
+    background-size: cover;
+
 }
 
 .card__body {
-    padding: 20px 20px;
+    padding: 1.25em;
 }
 
 .card__category {
     color: var(--dark-grayish-blue);
+    font-weight: 500;
     font-family: var(--ff-secondary);
     text-transform: uppercase;
     font-size: .8rem;
-    letter-spacing: 5px;
+    letter-spacing: 0.313rem;
+    margin-bottom: 1em;
 }
 
 .card__name {
-    font-size: 2rem;
+    font-size: 2.1rem;
+    line-height: 1;
 }
 
 .card__description {
     font-family: var(--ff-secondary);
-     color: var(--dark-grayish-blue);
+    color: var(--dark-grayish-blue);
+    line-height: 1.5;
+    font-size: .95rem;
 }
 
 .card__priceWrapper {
@@ -78,24 +99,54 @@ body {
 .btn-default {
     font-family: var(--ff-secondary);
     background-color: var(--dark-cyan);
+    color: #fff;
     border: none;
     display: inline-block;
     width: 100%;
-    height: 50px;
+    padding: 1em;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 5px;
     font-weight: bold;
     font-size: .8rem;
+    border-radius: .5em;
 } 
 
 .btn-default:focus,
 .btn-default:hover {
     background-color: hsl(157, 40%, 19%);
     color: white;
+    cursor: pointer;
 }
 
 .btn-default img {
     margin-right: 10px;
+}
+
+/* media queries */
+@media screen and (min-width: 600px) {
+    body {
+        font-size: 22px;
+    }
+
+    .card {
+        max-width: 28.125em;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .container {
+        max-width: 1440px;
+    }
+
+    .card__header {
+        background: url('/images/image-product-desktop.jpg') no-repeat;
+        background-size: cover;
+        min-height: 250px;
+        width: 100%;
+        border-radius: 10px 0 0 10px;
+
+    }
+
 }

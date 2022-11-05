@@ -2,31 +2,36 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-  <!-- <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <link rel="stylesheet" href="./public/css/styles.css">
   
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <title>Frontend Mentor | Product preview card component</title>
 <body>
-  <div class="container">
-    <div class="card">
-      <div class="card__header"></div>
+  <main class="container">
+    <article class="card">
+      <picture>
+        <source media="(min-width: 616px)" srcset="images/image-product-desktop.jpg">
+        <img class="card__picture" src="images/image-product-mobile.jpg" alt="Photo of a bottle of Cologne">
+      </picture>
       <div class="card__body">
-        <h5 class="card__category">perfume</h5>
-        <h4 class="card__name">Gabrielle Essence Eau De Parfum</h4>
+        <p class="card__category">perfume</p>
+        <h1 class="card__name">Gabrielle Essence Eau De Parfum</h1>
         <p class="card__description">
           A floral, solar and voluptuous interpretation composed by Olivier Polge, 
           Perfumer-Creator for the House of CHANEL.
         </p>
         <div class="card__priceWrapper">
           <span class="card__price">$149.99</span>
-          <span class="card__price--discount">$169.99</span>
+          <del class="card__price--discount">
+            <span class="sr-only">Previous Price</span>
+            $169.99
+          </del>
         </div>
         <button type="button" class="btn btn-default"><img src="/images//icon-cart.svg" aria-hidden="true">Add to Cart</button>
       </div>
-    </div>
-  </div>
+    </article>
+  </main>
   </div>
   <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>

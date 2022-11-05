@@ -37,18 +37,16 @@ body {
 }
 
 .card {
-    border-radius: 10px;
+    border-radius: 0.625rem;
     max-width: 22em;
     background-color: white;
 }
 
-.card__header {
-    background: url('/images/image-product-mobile.jpg');
-    border-radius: 10px 10px 0 0;
-    max-width: 100%;
-    min-height: 235px;
-    background-size: cover;
-
+.card__picture {
+    border-radius: 0.625rem 0.625rem 0 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .card__body {
@@ -92,9 +90,17 @@ body {
 .card__price--discount {
     font-size: .8rem;
     font-family: var(--ff-secondary);
-    text-decoration: line-through;
-    margin-left: 20px;
+    margin-left: 1.25rem;
     color: var(--dark-grayish-blue)
+}
+
+.sr-only {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
 }
 
 .btn-default {
@@ -122,13 +128,13 @@ body {
 }
 
 .btn-default img {
-    margin-right: 10px;
+    margin-right: 0.625rem;
 }
 
 /* media queries */
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 616px) {
     body {
-        font-size: 22px;
+        font-size: 1.375rem;
     }
 
     .card {
@@ -138,16 +144,11 @@ body {
     }
 
     .container {
-        max-width: 1440px;
+        max-width: 90rem;
     }
 
-    .card__header {
-        background: url('/images/image-product-desktop.jpg') no-repeat;
-        background-size: cover;
-        min-height: 250px;
-        width: 100%;
-        border-radius: 10px 0 0 10px;
-
+    .card__picture {
+        border-radius: 0.625rem 0 0 0.625rem;
     }
 
 }
